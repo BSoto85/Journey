@@ -6,7 +6,7 @@ import puppeteer from 'puppeteer';
   const page = await browser.newPage();
 
   // Navigate the page to a URL
-  await page.goto('https://www.nytimes.com/2024/06/03/us/nebraska-dead-woman-alive-funeral-home.html');
+  await page.goto('https://www.nytimes.com/2024/06/05/us/wwii-veteran-dies-dday-event.html');
 
   // Set screen size
   await page.setViewport({width: 1080, height: 1024});
@@ -15,8 +15,8 @@ import puppeteer from 'puppeteer';
   // await page.goto('https://myaccount.nytimes.com/auth/login', { waitUntil: 'networkidle2' });
 
   // // Enter the login credentials
-  // await page.type('input[id="username"]', 'armandopires@pursuit.org'); // Replace with your username
-  // await page.type('input[name="password"]', 'Hackdemo1'); // Replace with your password
+  // await page.type('input[name="email"]', 'add email'); // Replace with your username
+  // await page.type('input[name="password"]', 'add password'); // Replace with your password
 
   // // Click the login button and wait for navigation
   // await Promise.all([
@@ -25,10 +25,10 @@ import puppeteer from 'puppeteer';
   // ]);
 
 
- // Wait for and extract the title
- const titleElement = await page.waitForSelector('h1');
- const title = await titleElement.evaluate(el => el.textContent);
- console.log(title)
+  //  // Wait for and extract the title
+  //  const titleElement = await page.waitForSelector('h1');
+  //  const title = await titleElement.evaluate(el => el.textContent);
+  //  console.log(title)
 
    // Wait for the content to load
    await page.waitForSelector('.css-53u6y8');
@@ -46,6 +46,7 @@ import puppeteer from 'puppeteer';
   await browser.close();
 
 })();
+
 
 
 // export default htmlParse
